@@ -7,7 +7,7 @@ public class main {
         String menu;
 
         System.out.println("\nHola Elige opción:\n1. Ejercicio 1" + "\n2. Ejercicio 2\n" + "3. Ejercicio 3\n"
-                + "4. Ejercicio 4\n" + "5. Ejercicio 5\n" + "0.- Salir");
+                + "4. Ejercicio 4\n" + "5. Ejercicio 5\n" + "6. Ejercicio 6\n" + "7. Ejercicio 7\n" + "0.- Salir");
 
         System.out.print("Elige una opcion: ");
         menu = teclado.nextLine();
@@ -28,12 +28,12 @@ public class main {
             case "5":
                 ejercicio5(teclado);
                 break;
-            // case "6":
-            // ejercicio1();
-            // break;
-            // case "7":
-            // ejercicio1();
-            // break;
+            case "6":
+                ejercicio6(teclado);
+                break;
+            case "7":
+                ejercicio7(teclado);
+                break;
             default:
                 System.out.println("chau");
                 break;
@@ -118,7 +118,37 @@ public class main {
         main(null);
     }
 
-    static void ejercicio6() {
+    static void ejercicio6(Scanner teclado) {
+        int a, b, aE, bE, r;
 
+        System.out.println("\n>>Determinar la hipotenusa de un triangulo\n");
+
+        System.out.print("Dame el valor a: ");
+        a = teclado.nextInt();
+        System.out.print("Dame el valor b: ");
+        b = teclado.nextInt();
+
+        aE = (int) Math.pow(a, 2);
+        bE = (int) Math.pow(b, 2);
+
+        r = aE + bE;
+
+        System.out.println(r + " = " + aE + " + " + bE);
     }
+
+    static void ejercicio7(Scanner teclado) {
+        int cB, kpr, cpk;
+
+        System.out.println("\n>La curva loca\n");
+
+        System.out.print("Cuanto Km recoreras en total: ");
+        kpr = teclado.nextInt();
+        System.out.print("Costo por Km: ");
+        cpk = teclado.nextInt();
+
+        cB = kpr * cpk;
+
+        System.out.println("El precio del boleto estara a : " + cB);
+    }
+
 }
